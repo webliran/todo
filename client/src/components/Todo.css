@@ -1,0 +1,11 @@
+.TodoItem{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.TodoItem{
+    border: 1px solid #bbbbbb;
+    margin-top:5px;
+    padding: 5px;
+    border-radius: 10px;
+}
