@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const todoRouter = require('./routes/todoRouter.js')
 
-const accessTokenSecret = "34639684944599887167";
+const accessTokenSecret =  process.env.Secret || "1234";
 
 let users = [
     {

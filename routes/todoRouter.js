@@ -2,7 +2,7 @@ const express = require('express');
 const todoRouter = express.Router();
 const jwt = require('jsonwebtoken');
 
-const accessTokenSecret = process.env.Secret | "1234";
+const accessTokenSecret = process.env.Secret || "1234";
 console.log(accessTokenSecret);
 let todoDemoInfo = [
     {
@@ -19,7 +19,7 @@ const authJwt = (req,res,next) => {
         
         jwt.verify(token, accessTokenSecret, (err, user) => {
             if (err) {
-                return res.status(403).json(err);
+                return res.status(403).json({error:true});
             }
 
             req.user = user;
